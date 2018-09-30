@@ -1,5 +1,5 @@
 <h1 align="center">
-  TidyCV (Under Construction)
+  TidyCV
 </h1>
 
 <p align="center">
