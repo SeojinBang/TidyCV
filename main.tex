@@ -1,0 +1,334 @@
+% Part of TidyCV: Simple and tidy LaTeX template for your curriculum vitae
+% 
+% (c) 2018 by Seojin Bang
+% See LICENSE for licensing.
+%
+% Note: This LaTeX template requires tidycv.cls file to be in the same directory.
+
+%% To-do
+% add RESEARCH EXPERIENCE Invited Talks// Other Talks and Posters
+% add posters: ATS, EMSS (UCONN), SNU,
+% Presentations: CMU ML talk, two pettuum talks
+% color for publication style
+% check other bibtex entries such as books, manuscript
+% add it to overleaf or sharelatex? (Probably yes)
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{tidycv} % Use the custom tidycv.cls style
+
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+
+\name{Seojin}{Bang}
+\position{PhD candidate in Computational Biology}
+\address{School of Computer Science, Carnegie Mellon University}
+% \mobile{(+00) 00-0000-0000}
+\email{seojinb@cs.cmu.edu}
+% \homepage{www.homepage.com}
+\github{SeojinBang}
+\linkedin{seojinb}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \extrainfo{extra informations}
+
+\makeatletter
+%\renewcommand\@biblabel[1]{aaa}
+\renewenvironment{thebibliography}[1]
+     {\sectionskip
+      \vspace{-.7em}
+      \@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}%
+      \list{}%
+           {\leftmargin0pt
+            \@openbib@code
+            \usecounter{enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+\makeatother
+
+\begin{document}
+
+\makecvheader
+
+%----------------------------------------------------------------------------------------
+%	Research Interest
+%----------------------------------------------------------------------------------------
+\cvsection{Research Interest}
+\cvresearchinterest{My research interest is developing machine learning and deep learning approaches for disease diagnosis and characterization. In particular, I am interested in developing interpretable machine learning approaches for providing a rationale for the diagnosis and characterization %and embedding human knowledge to a multiview model 
+and extract human-understandable explanation from the model to support medical decision making.}
+%My research interest is to solve real-world problems in biomedicine. I develop machine learning and deep learning approaches for disease diagnosis and characterization and interpretable machine learning approaches for providing a rationale for the diagnosis and characterization. In particular, I am interested in improving clinical decision making system by (1) combining different types of data such as text and image as well as quantitative data collected from high-throughput platforms and (2) interpreting the black-box system for providing justification to accept or reject decisions suggested by the system or explaining the logic behind the system.
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+%% usage1: \cveducation{<Date>}{<Institution>}{<Description(s)>} 
+%% usage2: \cveducation{<Date>}{<Institution>}{
+%% 											   \begin{cveducationitems}
+%% 											   		<Description1>\\
+%% 											   		<Description2>\\
+%% 											   \end{cveducationitems}
+%% 											  } 
+\cvsection{Education}
+\begin{cveducations}
+  \cveducation{Present} % Year
+    {{\bf Carnegie Mellon University}} % Institution
+    {
+    \begin{cveducationitems} % Description(s)
+        PhD candidate in Computational Biology \hfill Advisor: Wei Wu\\
+	\end{cveducationitems}
+    }
+  \cveducation{2015} % Year
+    {{\bf University of Connecticut}} % Institution
+    {
+    \begin{cveducationitems} % Description(s)
+        MS in Statistics \hfill Advisor: Haim Bar\\
+	\end{cveducationitems}
+    }
+  \cveducation{2013} % Year
+    {{\bf Seoul National University}, Republic of Korea} % Institution
+    {
+    \begin{cveducationitems} % Description(s)
+        MS in Statistics \hfill Advisor: Taesung Park\\
+	\end{cveducationitems}
+    }
+  \cveducation{2010} % Year
+    {{\bf Sungkyunkwan University}, Republic of Korea} % Institution
+    {
+    \begin{cveducationitems} % Description(s)
+        BS in Mathetmatical Education $\cdot$ BE in Statistics\\
+	\end{cveducationitems}
+    }
+\end{cveducations}
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATION
+%----------------------------------------------------------------------------------------
+\cvsection{Publications/Preprints}
+%% usage 1: insert publications using bibentry
+\begin{cvpublications}
+  \bibliographystyle{tidycv}
+  \bibliography{publication}
+  \bibentry{bang2018multiple}
+  \bibentry{bang2019plstm}
+  \bibentry{jang2019ontohan}
+  
+  \bibentry{bang2018multiple}
+  \bibentry{wu2018asthma}
+  \bibentry{bar2018mixture}
+  \bibentry{bertholomey2018phosphoproteomic}
+  \bibentry{bang2016naive}
+  \bibentry{kim2012ethnic}
+  \bibentry{bang2012joint}
+\end{cvpublications}
+
+%% usage 2: insert all publications in `publication.bib` at once
+% \begin{cvpublications}
+% \nocite{*}
+% \bibliography{publication}
+% \bibliographystyle{tidycv} % simply replace <tidycv> with <unsrt> or any other BibTex styles if you want to use the other for bibliography
+% \end{cvpublications}
+
+%-------------------------------------------------------------------------------
+%	RESEARCH EXPERIENCE
+%-------------------------------------------------------------------------------
+%% usage: \begin{cvresearch}{<Project title>}{<Date>}{<Position>}{<Institution>}
+%%			\item <Description>
+%%			\item <Description>
+%%		  \end{cvresearch}
+\cvsection{Research Experience}
+\begin{cvresearches}
+%------------------------------------------------
+\begin{cvresearch}{Interpretable Machine Learning}{2018 -- 2018}{Research Intern advised by Dr.\@ Pengtao Xie}{Petuum}
+ \item Developed a system-agnostic interpretable machine learning approach to explain a decision made by a black box system.
+ \item Build a pytorch-based software for the interpretable learning approach.
+ \item Publication: \textit{Interpretable learning approach using deep variational information bottleneck method. 2018 Bang, Seojin and Xie, Pengtao and Xing, Eric} (in progress)
+\end{cvresearch}
+%------------------------------------------------
+\begin{cvresearch}{Severe Asthma Research Program}{2015 -- 2019}{Research Assistant advised by Dr.\@ Wei Wu}{Carnegie Mellon University}
+ \item Developed a multiple kernel k-means clustering approach to identify asthma subtypes by combining different types of clinical data.
+ \item Build an R-package: {\bf MKKC} for the multiple kernel k-means clustering approach.
+ \item Publication: \cite{wu2018asthma, bang2016naive}
+\end{cvresearch}
+%------------------------------------------------
+\begin{cvresearch}{Dimensional Reduction Analysis of Ultra High-dimensional Bioinformatics Data}{2012 -- 2013}{Research Scientist advised by Dr.\@ Taesung Park}{Seoul National University}
+ \item Developed a joint variable selection method in high-dimensional data using the elastic-net regularization technique.
+ \item Publication: \cite{bang2012joint}
+\end{cvresearch}
+%------------------------------------------------
+\begin{cvresearch}{Complex Biomarker Analysis for Pancreatic Cancer Diagnosis Modeling}{2012 -- 2013}{Research Scientist advised by Dr.\@ Taesung Park}{Seoul National University}
+\item Identified complex biomarkers of miRNA, mRNA, and protein for pancreatic cancer diagnosis using a statistical approach.
+\item Investigated different subtypes of intraductal papillary mucinous neoplasm (IPMN) using longitudinal clinical data using a time dependent survival model.
+\item Developed a prognostic and prediction model with miRNA, mRNA, and protein markers using a statistical approach.
+\end{cvresearch}
+%------------------------------------------------
+\begin{cvresearch}{The Pharmacometric Study (PK/PD Modeling \& Simulation) of Immune modulating Agents Utilizing Pharmacogenomics}{2012}{Research Assistant advised by Dr.\@ Taesung Park}{Seoul National University}
+ \item Examined differences in allele frequencies of pharmacogenes among populations using the size-modified index.
+ \item Publication: \cite{kim2012ethnic}
+\end{cvresearch}
+\end{cvresearches}
+
+%-------------------------------------------------------------------------------
+%	WORKING EXPERIENCE
+%-------------------------------------------------------------------------------
+%% usage: \cvworking{<Date>}{<Position>}{<Description>}{<Institution or company>}{<Location>}
+\cvsection{Working Experience}
+\begin{cvworkings}
+  \cvworking{Jan 2016 -- Present}{Research Assistant}{for Prof. Wei Wu}{Computational Biology Department, Carnegie Mellon University}{Pittsburgh, PA}{Publication: \cite{wu2018asthma, bang2018multiple, bertholomey2018phosphoproteomic, bang2016naive}}
+  \cvworking{May 2018 -- Dec 2018}{Research Intern}{in Artificial Intelligence and Machine Learning Solution Team}{Petuum}{Pittsburgh, PA}{}
+  \cvworking{Aug 2013 -- Aug 2015}{Research Assistant}{for Prof. Haim Bar}{Department of Statistics, University of Connecticut}{Storrs, CT}{Publication: \cite{bar2018mixture}}
+  \cvworking{Feb 2013 -- Aug 2013}{Research Scientist}{in Bioinformatics and Biostatistics}{BIBS at Seoul National University}{Korea}{}
+  \cvworking{Aug 2011 -- Feb 2013}{Research Assistant}{for Prof. Taesung Park}{Department of Statistics, Seoul National University}{Korea}{Publication: \cite{kim2012ethnic, bang2012joint}}
+\end{cvworkings}
+  
+%-------------------------------------------------------------------------------
+% SOFTWARE
+%-------------------------------------------------------------------------------
+%% usage: \cvsoftware{<Type>}{<Software title and description>}{<URL>} 
+\cvsection{Softwares}
+\begin{cvsoftwares}
+  \cvsoftware
+  {Python} % Type
+  {{\bf VIBI}: python implementation of VIBI} % Title
+  {https://github.com/SeojinBang/VIBI} % URL
+  \cvsoftware
+  {R-package} % Type
+  {{\bf MKKC}: multiple kernel $k$-means clustering on a multi-view data} % Title
+  {https://github.com/SeojinBang/MKKC} % URL
+  \cvsoftware
+  {R-package} % Type
+  {{\bf edgefinder}: a method for recovering a gene network’s structure from co-expression data.} % Title
+  {https://arxiv.org/abs/1804.01185} % URL
+  \cvsoftware
+  {LaTeX template} % Type
+  {{\bf TidyCV}: simple and tidy LaTeX template for your curriculum vitae} % Title
+  {https://github.com/SeojinBang/TidyCV} % URL
+\end{cvsoftwares}
+
+%----------------------------------------------------------------------------------------
+% TECHNICAL STRENGTHS
+%----------------------------------------------------------------------------------------
+%% usage: \cvtechnicalstrength{<Type>}{<List>} 
+\cvsection{Technical Strengths}
+\begin{cvtechnicalstrengths}
+  \cvtechnicalstrength
+  {Computer Languages} % Type
+  {Python, R, MATLAB, Bash, HTML} % List
+  \cvtechnicalstrength
+  {Library \& Tools} % Type
+  {Pytorch, Tensorflow, Keras, Git, LaTeX, Excel} % List
+\end{cvtechnicalstrengths}
+
+%----------------------------------------------------------------------------------------
+%	HONORS AND AWARDS
+%----------------------------------------------------------------------------------------
+%% usage1: \cvhonor{<Date>}{<Title>}{<Description(s)>} 
+%% usage2: \cvhonor{<Date>}{<Title>}{
+%% 									\begin{cvhonoritems}
+%% 										<Description1>\\
+%% 										<Description2>\\
+%% 									\end{cvhonoritems}
+%% 									} 
+\cvsection{Honors and Awards}
+\begin{cvhonors}
+  \cvhonor{2018}{{\bf The Center for Machine Learning and Health Fellowships in Digital Health}}{
+  	\begin{cvhonoritems} % Description(s)
+        full tuition and stipend for 12 months and research-related expenses (total $\$75,200$)\\
+	\end{cvhonoritems}}
+  \cvhonor{2013}{The Korean Statistical Society Paper Awards (3st Place)}{}
+  \cvhonor{2012}{The Korean Statistical Society Poster Awards (1st Place)}{}
+  \cvhonor{2006 -- 2010}{\bf National Science and Engineering Undergraduate Scholarship}{
+  	\begin{cvhonoritems} % Description(s)
+        full tuition for 8 semesters \hfill 2006 -- 2010\\
+        an additional $\$500$ grant for a high GPA \hfill 2009\\
+        an additional $\$500$ grant for a high GPA \hfill 2008\\
+	\end{cvhonoritems}}
+\end{cvhonors}
+
+%-------------------------------------------------------------------------------
+% PROFESSIONAL SERVICES
+%-------------------------------------------------------------------------------
+%% usage: \cvprofessional{<Date>}{<Position>}{<Event title>}{<Location>} 
+\cvsection{Professional Service}
+\begin{cvprofessionals}
+    \cvprofessional{2019}{Subreviewer}{IEEE Access}{}
+    \cvprofessional{2019}{Reviewer}{IEEE Transactions on Neural Networks and Learning Systems}{}
+   \cvprofessional{2018}{Admission Committee}{Computational Biology Department, Carnegie Mellon University}{}
+   \cvprofessional{2018}{Subreviewer}{The 9th ACM Conference on Bioinformatics, Computational Biology, and Health Informatics (ACM BCB)}{}
+   \cvprofessional{2012}{Program Committee}{International Symposium on Statistical Genetics}{Rep of Korea}
+   \cvprofessional{2012}{Program Committee}{Microarray Analysis Workshop: Statistical Analysis using R language}{Korea}
+   \cvprofessional{2011}{Program Committee}{The 2011 Spring Conference of the Korean Statistical Society}{Korea}
+\end{cvprofessionals}
+
+%----------------------------------------------------------------------------------------
+%	TEACHING EXPERIENCE
+%----------------------------------------------------------------------------------------
+%% usage: 
+%% \cvsubsection{<Institution>}{<Position>}
+%% \cvteaching{<Date>}{<Course title>}
+\cvsection{Teaching Experience}
+\cvsubsection{{\bf Carnegie Mellon University}}{Teaching Assistant}
+\begin{cvteachings}
+  \cvteaching
+  	{2018} % Year
+    {Quantitative Cell and Molecular Biology Lab} % Course Title
+  \cvteaching
+    {2017} % Year
+    {Computational Methods for Proteogenomics and Metabolomics} % Course Title
+\end{cvteachings}
+%--------------------
+\cvsubsection{\bf University of Connecticut}{Teaching Assistant}
+\begin{cvteachings}
+  \cvteaching{2014}{Mathematical Statistics}
+  \cvteaching{2014}{Introduction to Mathematical Statistics}
+  \cvteaching{2013}{Elementary Concepts of Statistics}
+  \cvteaching{2013}{Introduction to Statistics I and II}
+  \cvteaching{2013}{Statistical Methods}
+\end{cvteachings}
+%--------------------
+\cvsubsection{\bf Seoul National University, Korea}{Teaching Assistant}
+\begin{cvteachings}
+  \cvteaching{2012}{Statistics Laboratory}
+  \cvteaching{2012}{Regression and Analysis and Laboratory}
+  \cvteaching{2011}{Statistics}
+\end{cvteachings}
+%--------------------
+\cvsubsection{\bf Bongyoung Girls' Middle School, Korea}{Student Teacher}
+\begin{cvteachings}
+  \cvteaching{2009}{Middle School Mathematics}
+\end{cvteachings}
+%--------------------
+\cvsubsection{\bf Sungkyunkwan University, Korea}{Teacher}
+\begin{cvteachings}
+  \cvteaching{2006}{Alternative Elementary/Middle School Mathematics}
+\end{cvteachings} \vspace{.5em}
+
+%----------------------------------------------------------------------------------------
+%	Publication at the End
+%----------------------------------------------------------------------------------------
+%% If you want publications at the end as a separate section, simply uncomment below lines.
+%% usage 1: insert publications using bibentry
+% \clearpage
+% \cvpubsection{Publications}
+% \bibentry{wu2018asthma}
+% \bibentry{bar2018mixture}
+% \bibentry{bang2018multiple}
+
+%% usage 2: insert all publications in `publication.bib` at once
+% \clearpage
+% \cvpubsection{Publications}
+% \nocite{*}
+% \bibliography{publication}
+% \bibliographystyle{tidycv} % simply replace <tidycv> with <unsrt> or any other BibTex styles if you want to use the other for bibliography
+
+\end{document}
