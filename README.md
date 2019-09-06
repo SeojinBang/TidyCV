@@ -17,9 +17,7 @@
 
 | Page 1 | Page 2 |
 |:---:|:---:|
-| [![Example1](examples/cv-seojinbang_example1.png)](examples/cv-seojinbang.pdf)  | [![Example2](examples/cv-seojinbang_example2.png)](examples/cv-seojinbang.pdf) |
-
-Also, see an [example](examples/cv-seojinbang.pdf).
+| [![Example1](examples/cv-seojinbang_example1.png)](examples/cv-seojinbang_example1.png)  | [![Example2](examples/cv-seojinbang_example2.png)](examples/cv-seojinbang_example2.png) |
 
 
 ## Credit
