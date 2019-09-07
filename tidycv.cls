@@ -13,7 +13,7 @@
 % Suppress page numbers
 \pagestyle{empty} 
 % Needed to make fixed length table
-\RequirePackage[square]{natbib}
+\RequirePackage[numbers]{natbib}
 % Needed to make fixed length table
 \RequirePackage{array}
 % Needed to handle list environment
@@ -90,7 +90,7 @@
 \definecolor{red}{HTML}{FB4485}
 \definecolor{blue}{HTML}{6CE0F1}
 % Text colors
-\definecolor{darktext}{HTML}{414141}
+\definecolor{darktext}{HTML}{000000}%{414141}
 \colorlet{text}{darkgray}
 \colorlet{graytext}{gray}
 \colorlet{lighttext}{lightgray}
