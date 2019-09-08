@@ -56,6 +56,7 @@
   pdfkeywords={}
 }
 \usepackage{bibentry} % Needed for publications
+\usepackage{bibunits}
 \usepackage{longtable} % Needed to make a table span multiple pages
 
 
@@ -674,7 +675,7 @@
   \vspace{\acvSectionContentTopSkip}
   \vspace{-4.0mm}
   \begin{list}{}{ % List for each individual item in the section
-    \setlength{\leftmargin}{0em} % Margin within the section
+    \setlength{\leftmargin}{1.5em} % Margin within the section
   }
   \item[]
 }{

@@ -12,7 +12,6 @@
 % Hyundai Automobiles - XX, XX, XX
 % Petuum Talks?
 % add posters: ATS, EMSS (UCONN), SNU,
-% color for publication style
 % check other bibtex entries such as books, manuscript
 % add it to overleaf or sharelatex? (Probably yes)
 
@@ -118,18 +117,19 @@
 \cvsection{Publications/Preprints}
 %% usage 1: insert publications using bibentry
 \begin{cvpublications}
-  \bibliographystyle{tidycv}
-  \bibliography{publication}
-  \bibentry{bang2019explaining}
-  \bibentry{bang2018multiple}
-  \bibentry{bang2019plstm}
-  \bibentry{jang2019ontohan}
-  \bibentry{wu2018asthma}
-  \bibentry{bar2018mixture}
-  \bibentry{bertholomey2018phosphoproteomic}
-  \bibentry{bang2016naive}
-  \bibentry{kim2012ethnic}
-  \bibentry{bang2012joint}
+\begin{bibunit}[tidycv]
+  \nocite{bang2019explaining}
+  \nocite{bang2018multiple}
+  \nocite{bang2019plstm}
+  \nocite{jang2019ontohan}
+  \nocite{wu2018asthma}
+  \nocite{bar2018mixture}
+  \nocite{bertholomey2018phosphoproteomic}
+  \nocite{bang2016naive}
+  \nocite{kim2012ethnic}
+  \nocite{bang2012joint}
+  \putbib[publication]
+\end{bibunit}
 \end{cvpublications}
 
 %% usage 2: insert all publications in `publication.bib` at once
