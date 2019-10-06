@@ -157,6 +157,10 @@
 \newcommand*{\professionaltitlestyle}[1]{{\small\em\color{darktext} #1}}
 \newcommand*{\professionallocationstyle}[1]{{\small\color{darktext} #1}}
 
+% For elements of GENERAL EXPERIENCE
+\newcommand*{\experiencedescriptionstyle}[1]{{\small\color{darktext} #1}}
+\newcommand*{\experiencedatestyle}[1]{{\small\color{darktext} #1}}
+
 % For elements of SOFTWARE
 \newcommand*{\softwaretypestyle}[1]{{\small\bfseries\color{darktext} #1}}
 \newcommand*{\softwaretitlestyle}[1]{{\small\color{text} #1}}
@@ -477,11 +481,11 @@
 % Define a line of EDUCATION
 %% usage1: \cveducation{<Date>}{<Institution>}{<Description(s)>} 
 %% usage2: \cveducation{<Date>}{<Institution>}{
-%%                         \begin{cveducationitems}
-%%                            <Description1>\\
-%%                            <Description2>\\
-%%                         \end{cveducationitems}
-%%                        } 
+%                         \begin{cveducationitems}
+%                            <Description1>\\
+%                            <Description2>\\
+%                         \end{cveducationitems}
+%                        } 
 \newcommand*{\cveducation}[3]{%
   \ifempty{#3}
   	{\educationdatestyle{#1} & \educationinstitutionstyle{#2}\\}
@@ -503,6 +507,16 @@
   \end{itemize}
   \end{justify}
   \vspace{-7.5mm}
+}
+
+\newenvironment{cveducationitems2}{%
+  \vspace{-4.0mm}
+  \begin{justify}
+  \begin{itemize}[leftmargin=0ex, nosep, noitemsep]
+}{%
+  \end{itemize}
+  \end{justify}
+  \vspace{-9.5mm}
 }
 
 %--------- HONORS AND AWARDS
@@ -600,6 +614,29 @@
   	{\professionaldatestyle{#1} & \professionalpositionstyle{#2}, \professionaltitlestyle{#3}\\}
     {\professionaldatestyle{#1} & \professionalpositionstyle{#2}, \professionaltitlestyle{#3}, \professionallocationstyle{#4}\\}
 }
+
+%--------- GENERAL EXPERIENCE (SIMPLE FORMAT)
+% Define an environment for GENERAL EXPERIENCE 
+\newenvironment{cvexperiences}{%
+  \vspace{\acvSectionContentTopSkip}
+  \vspace{-1.5em}
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{longtable}{@{\extracolsep{\fill}} L{3cm} L{\textwidth - 3cm}}
+}{%
+	\centering
+  \end{longtable}
+  \vspace{-2.5em}
+}
+
+% Define a line of TEACHING EXPERIENCE
+%% usage: 
+%% \cvsubsection{<Institution>}{<Position>}
+%% \cvexperience{<Date>}{<Description>}
+\newcommand*{\cvexperience}[2]{%
+  \experiencedatestyle{#1} & \experiencedescriptionstyle{#2} \\
+}
+
 
 %--------- SOFTWARE
 % Define an environment for SOFTWARE

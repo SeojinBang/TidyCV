@@ -5,16 +5,6 @@
 %
 % Note: This LaTeX template requires tidycv.cls file to be in the same directory.
 
-%% To-do
-% add RESEARCH EXPERIENCE Invited Talks// Other Talks and Posters
-% Korea University - 06/21/2019
-% ML lunch, CMU - 11/26/2018
-% Hyundai Automobiles - XX, XX, XX
-% Petuum Talks?
-% add posters: ATS, EMSS (UCONN), SNU,
-% check other bibtex entries such as books, manuscript
-% add it to overleaf or sharelatex? (Probably yes)
-
 %----------------------------------------------------------------------------------------
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
@@ -24,14 +14,14 @@
 \newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
 
-\name{Seojin}{Bang}
-\position{PhD candidate in Computational Biology}
-\address{School of Computer Science, Carnegie Mellon University}
+\name{Harry}{Potter}
+\position{PhD candidate in Defence Against the Dark Arts}
+\address{Hogwarts School of Witchcraft and Wizardry}
 % \mobile{(+00) 00-0000-0000}
-\email{seojinb@cs.cmu.edu}
+\email{harry.potter@hogwarts.wi.edu}
 % \homepage{www.homepage.com}
-\github{SeojinBang}
-\linkedin{seojinb}
+\github{GitHub-ID}
+\linkedin{LinkedIn-ID}
 % \gitlab{gitlab-id}
 % \stackoverflow{SO-id}{SO-name}
 % \twitter{@twit}
@@ -67,7 +57,7 @@
 %	Research Interest
 %----------------------------------------------------------------------------------------
 \cvsection{Research Interest}
-\cvresearchinterest{My research interest is developing machine learning and deep learning approaches for disease diagnosis and characterization. In particular, I am interested in developing interpretable machine learning approaches for providing a rationale for biomedical decision system and extract human-understandable explanation from the model to support biomedical decision making. I am also interested in developing multimodal/multiview machine learning approaches for combining different types of biomedical data.}
+\cvresearchinterest{My research interest is ...}
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION
@@ -79,34 +69,35 @@
 %% 											   		<Description2>\\
 %% 											   \end{cveducationitems}
 %% 											  } 
+%% usage3: \cveducation{
+%%                      \begin{cveducationitems2}
+%%                          <Expected Date> \\ (expected)
+%%                      \end{cveducationitems2}
+%%                      }
+%%                      {<Institution>}{
+%% 										\begin{cveducationitems}
+%% 											<Description1>\\
+%% 											<Description2>\\
+%% 										\end{cveducationitems}
+%% 										} 
 \cvsection{Education}
 \begin{cveducations}
-  \cveducation{Present} % Year
-    {{\bf Carnegie Mellon University}} % Institution
+  \cveducation{
+    \begin{cveducationitems2}
+        Aug 2020 \\ (expected)
+	\end{cveducationitems2}
+    } % Year
+    {{\bf Hogwarts School of Witchcraft and Wizardry}} % Institution
     {
     \begin{cveducationitems} % Description(s)
-        PhD candidate in Computational Biology \hfill Advisor: Wei Wu\\
+        PhD candidate in Defence Against the Dark Arts \hfill Advisor: Albus Dumbledore\\
 	\end{cveducationitems}
     }
   \cveducation{2015} % Year
-    {{\bf University of Connecticut}} % Institution
+    {{\bf Seoul National Magic School}} % Institution
     {
     \begin{cveducationitems} % Description(s)
-        MS in Statistics \hfill Advisor: Haim Bar\\
-	\end{cveducationitems}
-    }
-  \cveducation{2013} % Year
-    {{\bf Seoul National University}, Republic of Korea} % Institution
-    {
-    \begin{cveducationitems} % Description(s)
-        MS in Statistics \hfill Advisor: Taesung Park\\
-	\end{cveducationitems}
-    }
-  \cveducation{2010} % Year
-    {{\bf Sungkyunkwan University}, Republic of Korea} % Institution
-    {
-    \begin{cveducationitems} % Description(s)
-        BS in Mathetmatical Education $\cdot$ BE in Statistics\\
+        BS in Magical Law\\
 	\end{cveducationitems}
     }
 \end{cveducations}
@@ -114,21 +105,21 @@
 %----------------------------------------------------------------------------------------
 %	PUBLICATION
 %----------------------------------------------------------------------------------------
-\cvsection{Publications/Preprints}
+\cvsection{Preprints}
 %% usage 1: insert publications using bibentry
 \begin{cvpublications}
 \begin{bibunit}[tidycv]
-  \nocite{bang2019explaining}
-  \nocite{bang2018multiple}
-  \nocite{bang2019plstm}
-  \nocite{jang2019ontohan}
-  \nocite{wu2018asthma}
-  \nocite{bar2018mixture}
-  \nocite{bertholomey2018phosphoproteomic}
-  \nocite{bang2016naive}
-  \nocite{kim2012ethnic}
-  \nocite{bang2012joint}
-  \putbib[publication]
+  \nocite{paper3}
+  \putbib[publication_public]
+\end{bibunit}
+\end{cvpublications}
+
+\cvsection{Publications}
+\begin{cvpublications}
+\begin{bibunit}[tidycv]
+  \nocite{paper2}
+  \nocite{paper1}
+  \putbib[publication_public]
 \end{bibunit}
 \end{cvpublications}
 
@@ -149,32 +140,14 @@
 \cvsection{Research Experience}
 \begin{cvresearches}
 %------------------------------------------------
-\begin{cvresearch}{Interpretable Machine Learning}{2018 -- 2018}{Research Intern advised by Dr.\@ Pengtao Xie}{Petuum}
- \item Developed a system-agnostic interpretable machine learning approach to explain a decision made by a black box system.
- \item Build a pytorch-based software for the interpretable learning approach.
- \item Preprint: \cite{bang2019explaining} (in progress)
+\begin{cvresearch}{Spells in Muggles}{2016 -- present}{Research Assistant advised by Prof.\@ Albus Dumbledore}{Hogwarts School of Witchcraft and Wizardry}
+ \item Developed a safe strategy to cast spells in the muggle world.
+ \item Publication: \cite{paper2,paper3}
 \end{cvresearch}
 %------------------------------------------------
-\begin{cvresearch}{Severe Asthma Research Program}{2015 -- 2019}{Research Assistant advised by Dr.\@ Wei Wu}{Carnegie Mellon University}
- \item Developed a multiple kernel k-means clustering approach to identify asthma subtypes by combining different types of clinical data.
- \item Build an R-package: {\bf MKKC} for the multiple kernel k-means clustering approach.
- \item Publication: \cite{bang2018multiple, wu2018asthma, bang2016naive}
-\end{cvresearch}
-%------------------------------------------------
-\begin{cvresearch}{Dimensional Reduction Analysis of Ultra High-dimensional Bioinformatics Data}{2012 -- 2013}{Research Scientist advised by Dr.\@ Taesung Park}{Seoul National University}
- \item Developed a joint variable selection method in high-dimensional data using the elastic-net regularization technique.
- \item Publication: \cite{bang2012joint}
-\end{cvresearch}
-%------------------------------------------------
-\begin{cvresearch}{Complex Biomarker Analysis for Pancreatic Cancer Diagnosis Modeling}{2012 -- 2013}{Research Scientist advised by Dr.\@ Taesung Park}{Seoul National University}
-\item Identified complex biomarkers of miRNA, mRNA, and protein for pancreatic cancer diagnosis using a statistical approach.
-\item Investigated different subtypes of intraductal papillary mucinous neoplasm (IPMN) using longitudinal clinical data using a time dependent survival model.
-\item Developed a prognostic and prediction model with miRNA, mRNA, and protein markers using a statistical approach.
-\end{cvresearch}
-%------------------------------------------------
-\begin{cvresearch}{The Pharmacometric Study (PK/PD Modeling \& Simulation) of Immune modulating Agents Utilizing Pharmacogenomics}{2012}{Research Assistant advised by Dr.\@ Taesung Park}{Seoul National University}
- \item Examined differences in allele frequencies of pharmacogenes among populations using the size-modified index.
- \item Publication: \cite{kim2012ethnic}
+\begin{cvresearch}{Concealment and Disguise}{2018 -- 2018}{Research Intern advised by Auror.\@ Alastor Moody}{Ministry of Magic}
+ \item Developed a creature-agnostic disguise strategy for last longer.
+ \item Publication: \cite{paper1}
 \end{cvresearch}
 \end{cvresearches}
 
@@ -184,31 +157,16 @@
 %% usage: \cvworking{<Date>}{<Position>}{<Description>}{<Institution or company>}{<Location>}
 \cvsection{Working Experience}
 \begin{cvworkings}
-  \cvworking{Jan 2016 -- Present}{Research Assistant}{for Prof. Wei Wu}{Computational Biology Department, Carnegie Mellon University}{Pittsburgh, PA}{Publication/Preprint: \cite{wu2018asthma, bang2018multiple, bertholomey2018phosphoproteomic, bang2016naive}}
-  \cvworking{May 2018 -- Dec 2018}{Research Intern}{in Artificial Intelligence and Machine Learning Solution Team}{Petuum}{Pittsburgh, PA}{Preprint: \cite{bang2019explaining}}
-  \cvworking{Aug 2013 -- Aug 2015}{Research Assistant}{for Prof. Haim Bar}{Department of Statistics, University of Connecticut}{Storrs, CT}{Publication: \cite{bar2018mixture}}
-  \cvworking{Feb 2013 -- Aug 2013}{Research Scientist}{in Bioinformatics and Biostatistics}{BIBS at Seoul National University}{Korea}{}
-  \cvworking{Aug 2011 -- Feb 2013}{Research Assistant}{for Prof. Taesung Park}{Department of Statistics, Seoul National University}{Korea}{Publication: \cite{kim2012ethnic, bang2012joint}}
+  \cvworking{Jan 2016 -- Present}{Research Assistant}{for Prof. Albus Dumbledore}{Department of Defence Against the Dart Arts}{Pittsburgh, PA}{Publication/Preprint: \cite{paper3,paper2}}
+  \cvworking{May 2018 -- Dec 2018}{Research Intern}{in the Auror Office}{Ministry of Magic}{London}{Preprint: \cite{paper1}}
 \end{cvworkings}
   
 %-------------------------------------------------------------------------------
 % SOFTWARE
 %-------------------------------------------------------------------------------
 %% usage: \cvsoftware{<Type>}{<Software title and description>}{<URL>} 
-\cvsection{Softwares}
+\cvsection{Software}
 \begin{cvsoftwares}
-  \cvsoftware
-  {Python} % Type
-  {{\bf VIBI}: python implementation of VIBI} % Title
-  {https://github.com/SeojinBang/VIBI} % URL
-  \cvsoftware
-  {R-package} % Type
-  {{\bf MKKC}: multiple kernel $k$-means clustering on a multi-view data} % Title
-  {https://github.com/SeojinBang/MKKC} % URL
-  \cvsoftware
-  {R-package} % Type
-  {{\bf edgefinder}: a method for recovering a gene network’s structure from co-expression data.} % Title
-  {https://arxiv.org/abs/1804.01185} % URL
   \cvsoftware
   {LaTeX template} % Type
   {{\bf TidyCV}: simple and tidy LaTeX template for your curriculum vitae} % Title
@@ -222,11 +180,11 @@
 \cvsection{Technical Strengths}
 \begin{cvtechnicalstrengths}
   \cvtechnicalstrength
-  {Computer Languages} % Type
-  {Python, R, C++, MATLAB, Bash, HTML} % List
+  {Magical Languages} % Type
+  {Pytongue, BATLAB, W++} % List
   \cvtechnicalstrength
   {Library \& Tools} % Type
-  {Pytorch, Tensorflow, Keras, Git, LaTeX, Excel} % List
+  {Magicflow, Magitorch, MaTeX, Wixel} % List
 \end{cvtechnicalstrengths}
 
 %----------------------------------------------------------------------------------------
@@ -241,13 +199,12 @@
 %% 									} 
 \cvsection{Honors and Awards}
 \begin{cvhonors}
-  \cvhonor{2018}{{\bf The Center for Machine Learning and Health Fellowships in Digital Health}}{
+  \cvhonor{2018}{{\bf Scamander Scholarship}}{
   	\begin{cvhonoritems} % Description(s)
         full tuition and stipend for 12 months and research-related expenses (total $\$75,200$)\\
 	\end{cvhonoritems}}
-  \cvhonor{2013}{The Korean Statistical Society Paper Awards (3st Place)}{}
-  \cvhonor{2012}{The Korean Statistical Society Poster Awards (1st Place)}{}
-  \cvhonor{2006 -- 2010}{\bf National Science and Engineering Undergraduate Scholarship}{
+  \cvhonor{2016}{The Korean Magical Society Paper Awards (1st Place)}{}
+  \cvhonor{2011 -- 2015}{\bf National Wizardry and Witchcraft Undergraduate Scholarship}{
   	\begin{cvhonoritems} % Description(s)
         full tuition for 8 semesters \hfill 2006 -- 2010\\
         an additional $\$500$ grant for a high GPA \hfill 2009\\
@@ -261,13 +218,8 @@
 %% usage: \cvprofessional{<Date>}{<Position>}{<Event title>}{<Location>} 
 \cvsection{Professional Service}
 \begin{cvprofessionals}
-   \cvprofessional{2019}{Reviewer}{IEEE Access}{}
-   \cvprofessional{2019}{Reviewer}{IEEE Transactions on Neural Networks and Learning Systems}{}
-   \cvprofessional{2018}{Admission Committee}{Computational Biology Department, Carnegie Mellon University}{}
-   \cvprofessional{2018}{Reviewer}{The 9th ACM Conference on Bioinformatics, Computational Biology, and Health Informatics (ACM BCB)}{}
-   \cvprofessional{2012}{Program Committee}{International Symposium on Statistical Genetics}{Rep of Korea}
-   \cvprofessional{2012}{Program Committee}{Microarray Analysis Workshop: Statistical Analysis using R language}{Korea}
-   \cvprofessional{2011}{Program Committee}{The 2011 Spring Conference of the Korean Statistical Society}{Korea}
+   \cvprofessional{2019}{Reviewer}{IWWW Access}{}
+   \cvprofessional{2018}{Admission Committee}{Defence Against the Dark Arts, Hogwarts School of Witchcraft and Wizardry}{}
 \end{cvprofessionals}
 
 %----------------------------------------------------------------------------------------
@@ -277,41 +229,21 @@
 %% \cvsubsection{<Institution>}{<Position>}
 %% \cvteaching{<Date>}{<Course title>}
 \cvsection{Teaching Experience}
-\cvsubsection{{\bf Carnegie Mellon University}}{Teaching Assistant}
+\cvsubsection{{\bf Hogwarts School of Witchcraft and Wizardry}}{Teaching Assistant}
 \begin{cvteachings}
   \cvteaching
   	{2018} % Year
-    {Quantitative Cell and Molecular Biology Lab} % Course Title
+    {Concealment and Disguise} % Course Title
   \cvteaching
     {2017} % Year
-    {Computational Methods for Proteogenomics and Metabolomics} % Course Title
+    {Transfiguration} % Course Title
 \end{cvteachings}
 %--------------------
-\cvsubsection{\bf University of Connecticut}{Teaching Assistant}
+\cvsubsection{\bf Seoul National Magic School}{Teaching Assistant}
 \begin{cvteachings}
-  \cvteaching{2014}{Mathematical Statistics}
-  \cvteaching{2014}{Introduction to Mathematical Statistics}
-  \cvteaching{2013}{Elementary Concepts of Statistics}
-  \cvteaching{2013}{Introduction to Statistics I and II}
-  \cvteaching{2013}{Statistical Methods}
+  \cvteaching{2014}{Stealth and Tracking}
+  \cvteaching{2014}{Introduction to Magic I and II}
 \end{cvteachings}
-%--------------------
-\cvsubsection{\bf Seoul National University, Korea}{Teaching Assistant}
-\begin{cvteachings}
-  \cvteaching{2012}{Statistics Laboratory}
-  \cvteaching{2012}{Regression and Analysis and Laboratory}
-  \cvteaching{2011}{Statistics}
-\end{cvteachings}
-%--------------------
-\cvsubsection{\bf Bongyoung Girls' Middle School, Korea}{Student Teacher}
-\begin{cvteachings}
-  \cvteaching{2009}{Middle School Mathematics}
-\end{cvteachings}
-%--------------------
-\cvsubsection{\bf Sungkyunkwan University, Korea}{Teacher}
-\begin{cvteachings}
-  \cvteaching{2006}{Alternative Elementary/Middle School Mathematics}
-\end{cvteachings} \vspace{.5em}
 
 %----------------------------------------------------------------------------------------
 %	Publication at the End
@@ -320,9 +252,9 @@
 %% usage 1: insert publications using bibentry
 % \clearpage
 % \cvpubsection{Publications}
-% \bibentry{wu2018asthma}
-% \bibentry{bar2018mixture}
-% \bibentry{bang2018multiple}
+% \bibentry{paper1}
+% \bibentry{paper2}
+% \bibentry{paper3}
 
 %% usage 2: insert all publications in `publication.bib` at once
 % \clearpage
