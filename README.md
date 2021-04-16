@@ -33,6 +33,6 @@
 
 ## Contact
 
-Please feel free to contact me by e-mail `seojinb at cs dot cmu dot edu`, if you have any questions.
+Please feel free to contact me by e-mail `seojinb at alumni dot cmu dot edu`, if you have any questions.
 
 
